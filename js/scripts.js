@@ -1,14 +1,14 @@
 $(document).ready(function() {
   $(".sprite-btn").click(function(){
-    $(".round").toggle();
+    $(".blockquote").toggle();
   });
-  $("#localFileData").click(function() {
+  $(".localFileData").click(function() {
     $.get("readme.txt", function(response) {
       console.log(response);
-      $("#content").html(response);
+      $(".content").html(response);
     });
   });
-  $("#externalData").click(function(){
+  $(".externalData").click(function(){
     $.getJSON("http://www.colourlovers.com/api/palettes/random?jsonCallback=?",
       { numResults: 1 },
           function(colorPalettes) {

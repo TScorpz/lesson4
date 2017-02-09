@@ -1,3 +1,4 @@
+/*centered div and text styles*/
 .container {
   margin: auto;
   position: absolute;
@@ -5,23 +6,24 @@
   width: 300px;
   height: 300px;
 }
-#box {
+.box {
   text-align: center;
   background-color: #777;
   line-height: 300px;
 }
-#box span {
+.box span {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
 }
-
+/*button sprite styles*/
 .sprite-btn {
   width: 186px;
   height: 53px;
   background: url("../images/button.png") 0 0;
 }
-#chat-bubble {
+/*chat bubble styles*/
+/*.chat-bubble {
   width: 150px;
   height: 150px;
   display: none;
@@ -77,4 +79,32 @@
 	bottom: -20px;
 	border: 12px solid;
 	border-color: lightyellow transparent transparent lightyellow;
+}*/
+.blockquote {
+  position: absolute;
+  width: 300px;
+  padding:15px 30px;
+  margin: auto;
+  color:#fff;
+  background:#5a8f00; /*default background for browsers without gradient support*/
+  /* css3 */
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#b8db29), to(#5a8f00));
+  background:-moz-linear-gradient(#b8db29, #5a8f00);
+  background:-o-linear-gradient(#b8db29, #5a8f00);
+  background:linear-gradient(#b8db29, #5a8f00);
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+/*chat bubble's triangle*/
+.blockquote:after {
+  content:"";
+  position:absolute;
+  bottom:-50px;
+  left:50px;
+  border-width:0 20px 50px 0px;
+  border-style:solid;
+  border-color:transparent #5a8f00;
+  display:block;
+  width:0;
 }
